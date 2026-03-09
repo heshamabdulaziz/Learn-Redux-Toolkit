@@ -17,12 +17,14 @@ export const counterSlice = createSlice({
     }
     ,
     decrement:(state)=>{state.count-=1},
-    incrementByAmount:(state,action)=>{state.count+=action.payload}
+    // get date from inputs
+    incrementByAmount:(state,action)=>{state.count+=action.payload},
+     incrementByInputValue:(state,action)=>{state.count+=action.payload}
     
   },
 })
 
 // Action creators are generated for each case reducer function
-export const{increment,decrement,incrementByAmount}=counterSlice.actions
+export const{increment,decrement,incrementByAmount, incrementByInputValue}=counterSlice.actions
 export default counterSlice.reducer
 
