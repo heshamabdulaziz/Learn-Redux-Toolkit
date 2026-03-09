@@ -12,8 +12,7 @@ export const counterSlice = createSlice({
     increment:(state)=>{
      state.count+=1
      console.log(state.count)
-     
-
+    
     }
     ,
     decrement:(state)=>{state.count-=1},
