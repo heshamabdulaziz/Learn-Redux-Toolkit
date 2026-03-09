@@ -1,6 +1,6 @@
 
 import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment, incrementByInputValue } from '../redux/Counterslice';
+import { decrement, increment, incrementByInputValue, reset } from '../redux/Counterslice';
 import { useState } from 'react';
 
 export default  function Counter_Component() {
@@ -41,6 +41,14 @@ onClick={handlincreament}>INC(+)
   dispatch(decrement())}}
   
   >DEC(-)</button> 
+
+  <br/><br/>
+
+<button style={{backgroundColor:"blue",color:"white",fontSize:20,}} 
+  onClick={()=>{
+  dispatch(reset(0))}}
+  
+  >Reset</button> 
       </div>
     
   )
